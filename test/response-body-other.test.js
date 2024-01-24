@@ -1,0 +1,15 @@
+import express from "express";
+import request from "supertest";
+
+const app = express();
+
+app.get("/", (req, res) => {
+  console.info(`dirname : ${__dirname}`);
+  res.sendFile(__dirname + "/contoh.txt");
+});
+
+test("Test Response Send File", async () => {
+  const response = await request(app).get("/");
+
+  expect(response.text).toBe("Contoh NFR");
+});

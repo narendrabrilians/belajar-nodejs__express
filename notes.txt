@@ -1,0 +1,82 @@
+1. PENGENALAN EXPRESSJS
+
+2. MEMBUAT PROJECT
+
+3. APPLICATION (hello.js)
+object utama
+
+4. BASIC ROUTING (hello.js)
+app.connect(path, callback), app.get(path, callback), app.all(path, callback) dan lainnya
+
+5. UNIT TEST (request.test.js)
+library => Supertest
+
+6. REQUEST (request-http.test.js)
+
+7. REQUEST URL (request-url.test.js)
+bisa mendapatkan informasi URL saat ini
+
+8. REQUEST QUERY PARAM (request-query.test.js)
+
+9. REQUEST HEADER (request-header.test.js)
+
+10. RESPONSE (response.test.js)
+
+11. RESPONSE STATUS (response-status.test.js)
+
+12. RESPONSE HEADER (response-header.test.js)
+res.set(name, value)
+res.header(name, value)
+
+13. RESPONSE BODY (response-body.test.js)
+res.send(body)
+
+14. REDIRECT (response-redirect.test.js)
+
+15. MIDDLEWARE (middleware.test.js)
+
+16. ROUTE PATH (route-path.test.js)
+Path to Regex bisa untuk routing dengan regex
+
+17. ROUTE PARAMETER (route-parameter.test.js)
+
+18. ROUTE FUNCTION (route-function.test.js)
+
+19. ROUTER (router.test.js)
+
+20. TYPE OF MIDDLEWARE
+Application-level => app.use(path, middleware) // bisa pakai path
+Router-level      => router.use(path, middleware)
+Error-handling    => app.use(path, middleware) // callbacknya ada 4 parameter (error, req, res, next) => {}
+Built-in          => express.json(), express.text(), express.raw(), express.urlencoded(), express.static()
+Third-party       => middleware orang lain / dependency middleware
+
+21. REQUEST BODY (request-body.test.js)
+Built-in Middleware
+express.json()        => JSON
+express.text()        => string
+express.raw()         => Buffer
+express.urlencoded()  => Form
+
+22. COOKIE (cookie.test.js)
+pakai Third-Party Middleware => Cookie Parser
+req.cookies
+
+23. SIGNED COOKIE (cookie-signed.test.js)
+Setiap Cookie ada signature, sehingga kalau diubah di Client maka signature tidak akan sama lagi (Cookie Parser)
+
+24. RESPONSE BODY LAINNYA (response-body-other.test.js)
+res. => send, download, json, redirect, sendFile
+
+25. ERROR HANDLING (error-handling.test.js)
+middleware
+
+26. STATIC FILE (static-file.test.js)
+
+27. TEMPLATE ENGINE (template.test.js)
+
+28. FILE UPLOUD (request-body.test.js)
+npm install express-fileuploud
+
+29. NOT FOUND HANDLER (not-found.test.js)
+buat middleware di akhir route
